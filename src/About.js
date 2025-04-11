@@ -1,13 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLeaf, FaUsers, FaStar, FaAward } from 'react-icons/fa';
+import { FaPinterest, FaTwitter, FaTumblr, FaDribbble } from 'react-icons/fa';
+import { FaShippingFast, FaHeadset, FaShieldAlt } from 'react-icons/fa';
 
-import {
-  FaSeedling,
-  FaHandsHelping,
-  FaCarrot,
-  FaBoxOpen,
-} from "react-icons/fa";
 import './About.css';
 
 
@@ -64,6 +60,42 @@ function About() {
       value: '156+', 
       label: 'Awards Winning'
     },
+  ];
+
+  const teamMembers = [
+    {
+      name: 'Pawan Shimpi',
+      title: 'Director',
+      image: '/a1.jpg',
+    },
+    {
+      name: 'Vaibhav Mali',
+      title: 'Manager',
+      image: '/a2.png',
+    },
+    {
+      name: 'Himani Pande',
+      title: 'Director',
+      image: '/a1.jpg',
+    },
+  ];
+
+  const features = [
+    {
+      icon: <FaShippingFast size={32} />, 
+      title: 'Free Shipping',
+      description: 'Free Home Delivery Offer'
+    },
+    {
+      icon: <FaHeadset size={32} />,
+      title: 'Online Support',
+      description: '24/7 Online Support Provide'
+    },
+    {
+      icon: <FaShieldAlt size={32} />,
+      title: 'Secure Payment',
+      description: 'Fully Secure Payment System'
+    }
   ];
 
   return (
@@ -185,6 +217,60 @@ function About() {
         ))}
       </div>
     </section>
+ <div className="team-section">
+      <motion.div
+        className="team-header"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <p className="team-subtitle">HAND WORK</p>
+        <h2 className="team-title">OUR EXPERT TEAM</h2>
+      </motion.div>
+
+      <div className="team-grid">
+        {teamMembers.map((member, index) => (
+          <motion.div
+            key={index}
+            className="team-card"
+            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+          >
+            <img src={member.image} alt={member.name} className="team-image" />
+            <h3>{member.name}</h3>
+            <p>{member.title}</p>
+            <div className="social-icons">
+              <FaPinterest />
+              <FaTwitter />
+              <FaTumblr />
+              <FaDribbble />
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+    
+    <div className="feature-container">
+      {features.map((feature, index) => (
+        <motion.div
+          key={index}
+          className="feature-box"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: index * 0.2 }}
+        >
+          <div className="feature-icon">{feature.icon}</div>
+          <div className="feature-text">
+            <h4>{feature.title}</h4>
+            <p>{feature.description}</p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+
+    
     </>
   );
 }
