@@ -1,10 +1,71 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaLeaf, FaUsers, FaStar, FaAward } from 'react-icons/fa';
 
+import {
+  FaSeedling,
+  FaHandsHelping,
+  FaCarrot,
+  FaBoxOpen,
+} from "react-icons/fa";
 import './About.css';
 
 
 function About() {
+  const steps = [
+    {
+      step: 'STEP - 01',
+      title: 'Work Planning',
+      description: 'Begin by conducting thorough soil tests to understand its composition, pH levels, and nutrient.',
+      icon: '/bg1.png',
+      img: '/a1.jpg',
+    },
+    {
+      step: 'STEP - 02',
+      title: 'Farm Growing',
+      description: 'Begin by conducting thorough soil tests to understand its composition, pH levels, and nutrient.',
+      icon: '/bg1.png',
+      img: '/a1.jpg',
+    },
+    {
+      step: 'STEP - 03',
+      title: 'Crop Harvesting',
+      description: 'Begin by conducting thorough soil tests to understand its composition, pH levels, and nutrient.',
+      icon: '/b9.png',
+      img: '/a1.jpg',
+    },
+    {
+      step: 'STEP - 04',
+      title: 'Food Processing',
+      description: 'Begin by conducting thorough soil tests to understand its composition, pH levels, and nutrient.',
+      icon: '/bg1.png',
+      img: '/a1.jpg',
+    },
+  ];
+
+  const stats = [
+    {
+      icon: <FaLeaf size={40} />, 
+      value: '15663+', 
+      label: 'Our Total Products'
+    },
+    {
+      icon: <FaUsers size={40} />, 
+      value: '356+', 
+      label: 'Team Members'
+    },
+    {
+      icon: <FaStar size={40} />, 
+      value: '2365+', 
+      label: 'Satisfied Customers'
+    },
+    {
+      icon: <FaAward size={40} />, 
+      value: '156+', 
+      label: 'Awards Winning'
+    },
+  ];
+
   return (
     <>
         <section className="about-section">
@@ -81,7 +142,49 @@ function About() {
       </div>
     </section>
 
-    
+    <section className="how-we-work-section">
+      <h2 className="how-we-work-title">How We Work It?</h2>
+      <div className="steps-container">
+        {steps.map((step, index) => (
+          <motion.div
+            key={index}
+            className="step-card"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="step-img-wrapper">
+              <img src={step.img} alt={step.title} className="step-img" />
+              <div className="step-icon">
+                <img src={step.icon} alt="icon" />
+              </div>
+            </div>
+            <p className="step-label">{step.step}</p>
+            <h3 className="step-title">{step.title}</h3>
+            <p className="step-description">{step.description}</p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+
+    <section className="stats-section">
+      <div className="stats-container">
+        {stats.map((stat, index) => (
+          <motion.div
+            className="stat-card"
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+          >
+            <div className="icon">{stat.icon}</div>
+            <div className="value">{stat.value}</div>
+            <div className="label">{stat.label}</div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
     </>
   );
 }
