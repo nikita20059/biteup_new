@@ -467,3 +467,157 @@
   /* background: url('../public/a2.PNG') no-repeat center bottom; */
   background-size: cover;
 }
+.team-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.team-section h4 {
+  color: #9acd32;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.team-section h2 {
+  font-size: 36px;
+  margin: 10px 0 40px;
+  font-weight: bold;
+  color: #111;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-card {
+  background: #fafafa;
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.team-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.team-card h3 {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #222;
+}
+
+.team-card p {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-icons a {
+  background: #efefef;
+  padding: 10px;
+  border-radius: 50%;
+  color: #333;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a:hover {
+  background: #9acd32;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card {
+    width: 90%;
+  }
+
+  .team-card img {
+    height: auto;
+  }
+}
+/* FeatureBoxes.css */
+.feature-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #fefefe;
+}
+
+.feature-box {
+  background: white;
+  border: 2px solid #cbd63d;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 280px;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+  background-color: #cbd63d;
+  border-radius: 50%;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-text h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.feature-text p {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .feature-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
