@@ -320,3 +320,150 @@
     font-size: 2rem;
   }
 }
+.how-we-work-section {
+  padding: 60px 20px;
+  background-color: #f8fbf2;
+  text-align: center;
+}
+
+.how-we-work-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.steps-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.step-card {
+  width: 250px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+}
+
+.step-img-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
+  margin-bottom: 20px;
+}
+
+.step-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.step-icon {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+
+.step-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.step-label {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.step-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.step-description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .step-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+/* StatsSection.css */
+.stats-section {
+  background-color: #088a08;
+  padding: 3rem 2rem;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: -35px;
+  margin-top: -38px;
+}
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.stat-card .icon {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.stat-card .value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.stat-card .label {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.stats-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  /* background: url('../public/a2.PNG') no-repeat center bottom; */
+  background-size: cover;
+}
