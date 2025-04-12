@@ -249,6 +249,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaStar, FaShoppingCart } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { FaApple, FaGooglePlay, FaFacebookF, FaGoogle, FaGithub, FaTwitter } from 'react-icons/fa';
+import { PiLightningFill } from 'react-icons/pi';
 import { BiLogoInstagramAlt } from "react-icons/bi";
 
 import 'swiper/css';
@@ -738,7 +740,8 @@ export default function Home() {
   </div>
   
 </section>
-<Wave mask="url(#mask)" fill="rgb(243, 34, 160)">
+
+<Wave mask="url(#mask)" fill="rgb(243, 34, 160)"  style={{ marginTop: '-49px' }}>
           <defs>
             <linearGradient id="gradient" gradientTransform="rotate(90)">
               <stop offset="0" stopColor="white" />
@@ -748,8 +751,82 @@ export default function Home() {
               <rect x="0" y="0" width="2000" height="100" fill="url(#gradient)" />
             </mask>
           </defs>
-        </Wave>0
+        </Wave>
+        
+<div className="footer-container">
+      {/* Hero Section */}
+      <motion.div 
+        className="footer-hero"
+        initial={{ opacity: 0, y: 30 }} 
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 0.6 }}
+      >
+        <div className="footer-hero-content">
+          <h1>Boost your business growth with Floti - your ultimate productivity tool</h1>
+          <motion.button 
+            className="footer-button"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Try 14 Days Free Trial
+          </motion.button>
+        </div>
+      </motion.div>
 
+      {/* Footer Main */}
+      <div className="footer-main">
+        {/* Floti Info */}
+        <div className="footer-column">
+          <div className="footer-logo">
+            <PiLightningFill size={28} />
+            <h2>Floti</h2>
+          </div>
+          <p>
+            This may include the company’s address, phone number, email address, and links to social media profiles. Links to important pages within the website, such as the homepage.
+          </p>
+        </div>
+
+        {/* Product Links */}
+        <div className="footer-column">
+          <h3>PRODUCT</h3>
+          <ul>
+            <li>Services</li>
+            <li>About Us</li>
+            <li>News & Stories</li>
+            <li>Roadmap</li>
+          </ul>
+        </div>
+
+        {/* Important Links */}
+        <div className="footer-column">
+          <h3>IMPORTANT LINKS</h3>
+          <ul>
+            <li>Our Journeys</li>
+            <li>Roadmap</li>
+            <li>Pricing Plans</li>
+          </ul>
+        </div>
+
+        {/* Downloads */}
+        <div className="footer-column">
+          <h3>DOWNLOADS</h3>
+          <button className="store-button"><FaApple /> App Store</button>
+          <button className="store-button"><FaGooglePlay /> Google Play</button>
+        </div>
+      </div>
+
+      {/* Footer Bottom */}
+      <div className="footer-bottom">
+        <p>2025© Floti - Zoyothemes.com Terms Conditions & Policy.</p>
+        <div className="footer-icons">
+          <FaFacebookF />
+          <FaGoogle />
+          <FaTwitter />
+          <FaGithub />
+          <PiLightningFill />
+        </div>
+      </div>
+    </div>
 
     </div>
   );
