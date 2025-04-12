@@ -4,11 +4,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 5%;
-  background: linear-gradient(to right, #ffaad4 10%, #ec1596 50%, #ffaad4 100%);
+  /* background: linear-gradient(to right, #ffaad4 10%, #ec1596 50%, #ffaad4 100%); */
   position: relative;
   z-index: 10;
-  box-shadow: 0 4px 15px rgba(243, 34, 160, 0.3);
-  border-bottom: 2px solid #fff0f5;
+  /* box-shadow: 0 4px 15px rgba(243, 34, 160, 0.3); */
+  /* border-bottom: 2px solid #fff0f5; */
 }
 
 .logo {
@@ -33,7 +33,7 @@
 
 .nav-links a,
 .nav-links li {
-  color: white;
+  color: #f322a0;
   font-weight: 600;
   text-decoration: none;
   position: relative;
@@ -52,7 +52,7 @@
   position: absolute;
   width: 0%;
   height: 3px;
-  background: white;
+  background: #f322a0;
   left: 0;
   bottom: -6px;
   border-radius: 5px;
@@ -65,8 +65,8 @@
 }
 
 .order-btn {
-  background: #fff;
-  color: #f322a0;
+  background: #f322a0;
+  color: #fff;
   padding: 12px 25px;
   border: none;
   border-radius: 50px;
