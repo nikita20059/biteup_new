@@ -45,6 +45,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route,Link } from "react-router-dom";
 import Home from "./Home"; 
 import About from "./About";
+import Card from "./Card";
 import './App.css';
 
 
@@ -65,7 +66,8 @@ function App() {
           <li>Shop</li>
           <li>Pages</li>
           <li>Blog</li>
-          <li>Contact</li>
+        <Link to="/card">Contact</Link>
+
         </ul>
         <button className="order-btn">Order Now</button>
       </nav>
@@ -91,6 +93,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/card" element={<Card />} />
+
       </Routes>
     </Router>
     
