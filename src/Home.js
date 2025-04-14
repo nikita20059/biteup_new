@@ -307,21 +307,21 @@ export default function Home() {
       tagline: 'Welcome to FlavorTown!',
       heading: 'The Best Burgers in Town',
       description: 'Juicy, delicious burgers made fresh to order.',
-      image: '/bg1.png',
+      image: '/c6.png',
     },
     {
       id: 2,
       tagline: 'Authentic Pizza Experience',
       heading: 'Wood-fired Pizzas',
       description: 'Crispy crust and cheesy toppings straight from Italy.',
-      image: '/bg3.png',
+      image: '/c8.png',
     },
     {
       id: 3,
       tagline: 'Sweet Treats Await!',
       heading: 'Decadent Desserts',
       description: 'Satisfy your sweet tooth with our desserts.',
-      image: '/bg4.png',
+      image: '/c7.png',
     },
   ];
 
@@ -346,35 +346,35 @@ export default function Home() {
     title: "Chicken Pizza",
     price: "$24.00",
     rating: 4,
-    image: "/food-1.png"
+    image: "/bg1.png"
   },
   {
     id: 2,
     title: "Egg And Cucumber",
     price: "$28.00",
     rating: 4,
-    image: "/food-1.png"
+    image: "/c6.png"
   },
   {
     id: 3,
     title: "Chicken Fried Rice",
     price: "$20.00",
     rating: 4,
-    image: "/food-1.png"
+    image: "/bg3.png"
   },
   {
     id: 4,
     title: "Chicken Leg Piece",
     price: "$58.00",
     rating: 4,
-    image: "/food-1.png"
+    image: "/c4.png"
   },
   {
     id: 5,
     title: "Chinese Pasta",
     price: "$70.00",
     rating: 4,
-    image: "/food-1.png"
+    image: "/c5.png"
   },
 ];
 
@@ -762,13 +762,13 @@ export default function Home() {
         transition={{ duration: 0.6 }}
       >
         <div className="footer-hero-content">
-          <h1>Boost your business growth with Floti - your ultimate productivity tool</h1>
+          <h1>Weekend special: Buy 1 Pizza, Get 1 Free!</h1>
           <motion.button 
             className="footer-button"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Try 14 Days Free Trial
+            Order now!
           </motion.button>
         </div>
       </motion.div>
@@ -778,11 +778,11 @@ export default function Home() {
         {/* Floti Info */}
         <div className="footer-column">
           <div className="footer-logo">
-            <PiLightningFill size={28} />
-            <h2>Floti</h2>
+            {/* <PiLightningFill size={28} /> */}
+            <h2>BiteUp</h2>
           </div>
           <p>
-            This may include the company’s address, phone number, email address, and links to social media profiles. Links to important pages within the website, such as the homepage.
+          Experience mouthwatering flavors, freshly cooked meals, and fast delivery. From classic favorites to chef’s specials, BiteUp serves happiness on a plate – dine-in, takeout, or order online!
           </p>
         </div>
 
@@ -803,7 +803,7 @@ export default function Home() {
           <ul>
             <li>Our Journeys</li>
             <li>Roadmap</li>
-            <li>Pricing Plans</li>
+            <li>Pricing </li>
           </ul>
         </div>
 
@@ -817,7 +817,7 @@ export default function Home() {
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>2025© Floti - Zoyothemes.com Terms Conditions & Policy.</p>
+        <p> © Copyright 2025 BiteUp. All Rights Reserved</p>
         <div className="footer-icons">
           <FaFacebookF />
           <FaGoogle />
